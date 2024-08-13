@@ -9,7 +9,7 @@ services:
     ports:
       - 8000:8000
     environment:
-      - WEAVIATE_URL_VERBA=http://weaviate:8080
+      - WEAVIATE_URL_VERBA=http://weaviate:8888
       - OPENAI_API_KEY=$OPENAI_API_KEY
       - COHERE_API_KEY=$COHERE_API_KEY
       - OLLAMA_URL=http://host.docker.internal:11434
@@ -39,7 +39,7 @@ services:
       - --host
       - 0.0.0.0
       - --port
-      - '8080'
+      - '8888'
       - --scheme
       - http
     image: semitechnologies/weaviate:1.24.2
